@@ -5,6 +5,7 @@ import TinderCards from './components/TinderCards'
 import './App.css'
 import Buttons from "./components/Buttons"
 import Chats from "./components/Chats"
+import ChatScreen from "./components/ChatScreen"
 
 
 const App = () => {
@@ -16,6 +17,10 @@ const App = () => {
             <Header />
             <TinderCards />
             <Buttons />
+          </Route>
+          <Route path='/chat/:person'>
+            <Header backButton='/chat' />
+            <ChatScreen />
           </Route>
           <Route path='/chat'>
             <Header backButton='/'/>
